@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rspec", "~> 3.6", ">= 3.6.0"
 
-  s.files = `find *`.split("\n").uniq.sort.select { |f| !f.empty? }
+  s.files = `git ls-files`.split($/)
   s.executables = []
   s.require_paths = ["lib"]
 end
